@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership Acquisition Model</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Spectral:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e7e3dc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-section {
+      text-align: center;
+      padding: 80px 20px 30px;
+      background-color: #f0eee9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .header-section h1 {
+      font-family: 'Spectral', serif;
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+      color: #222;
+    }
+
+    .header-section p {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 1em;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .project-image {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+
+    .description {
+      flex: 1 1 400px;
+      text-align: left;
+      font-size: 1em;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 60px auto 80px;
+      font-weight: 600;
+      text-decoration: underline;
+      color: #4a90e2;
+    }
+
+    .back-link:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 800px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .description {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-section">
+    <h1>BKM Data Fellowship Portfolio of Work</h1>
+    <p>Riain Fitzsimons<br>Brooklyn Museum Data Science Fellow, MS Data Analytics and Visualization</p>
+  </div>
+
+  <div class="content">
+    <img 
+      src="michelangelo_data.png" 
+      alt="Abstract image representing data modeling" 
+      class="project-image"
+    >
+
+    <div class="description">
+      <p>
+        This project used an imbalanced classification model to predict which museum visitors were most likely to respond 
+        to a targeted membership campaign. The model was trained on historical engagement, visitation patterns, 
+        ticketing behavior, and proximity to the museum.
+      </p>
+      <p>
+        Feature importance, calibration, and lift testing were used to refine outputs, allowing the museum to target the 
+        top 10% of visitors with the highest predicted probability of conversion. The final model significantly outperformed 
+        random mailing and is being considered for production integration.
+      </p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Portfolio Home</a>
+
+</body>
+</html>

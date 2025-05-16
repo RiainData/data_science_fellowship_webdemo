@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membership Acquisition Model</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Spectral:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e7e3dc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-section {
+      text-align: center;
+      padding: 80px 20px 30px;
+      background-color: #f0eee9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .header-section h1 {
+      font-family: 'Spectral', serif;
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+      color: #222;
+    }
+
+    .header-section h2 {
+      font-family: 'Spectral', serif;
+      font-size: 1.6em;
+      font-weight: 600;
+      color: #555;
+      margin-top: 0.3em;
+      margin-bottom: 1em;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 40px;
+      gap: 60px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .project-image {
+      flex: 1 1 40%;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .description {
+      flex: 1 1 50%;
+      font-size: 1em;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+    }
+
+    .description p {
+      margin-bottom: 1.5em;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 60px auto 80px;
+      font-weight: 600;
+      text-decoration: underline;
+      color: #4a90e2;
+    }
+
+    .back-link:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .content-wrapper {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+
+      .description {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-section">
+    <h1>Membership Acquisition Model</h1>
+    <h2>Can we predict and explain who is most likely to become a Brooklyn Museum Member?</h2>
+  </div>
+
+  <div class="content-wrapper">
+    <img src="images/joel-moysuh-ObweQkF5w30-unsplash.jpg" alt="..." class="project-image">
+
+    <div class="description">
+      <p>
+        This project used an imbalanced classification model to predict which museum visitors were most likely to respond 
+        to a targeted membership campaign. The model was trained on historical engagement, visitation patterns, 
+        ticketing behavior, and proximity to the museum. Feature importance and calibration were used to improve model 
+        interpretability and lift-based targeting.
+      </p>
+      <p>
+        The final model outperformed random mailing by a significant margin and has been proposed for integration into 
+        the museum’s marketing workflow.
+      </p>
+      <p>
+        The Brooklyn Museum is one year into its customer relationship management (CRM) journey with Tessitura,
+        a platform that has begun to centralize and enrich its understanding of visitor engagement.
+        As the institution builds a more unified data infrastructure, 
+        it has also expressed a strategic interest in improving the efficiency of its membership acquisition 
+        efforts—particularly in converting ticket buyers and event attendees into long-term members. 
+        This model was developed to support that goal: using behavioral, geographic, 
+        and transactional data, it aims to identify high-potential prospects and provide a data-informed 
+        foundation for targeted outreach campaigns.
+      </p>
+      <p>
+        Special thanks to Alice Northover, Chris Voss, and Alex Valenzuela for their generous support throughout this project.
+        Their guidance in navigating Tessitura, explaining the museum’s business rules, and patiently walking me through the
+        complexities of membership strategy and institutional context was invaluable to the model’s development and to
+        my own growth during the fellowship.
+      </p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Portfolio Home</a>
+
+</body>
+</html>

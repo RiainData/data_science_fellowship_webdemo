@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollytelling Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Spectral:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e7e3dc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 0 20px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .sticky-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .sticky-image {
+      position: sticky;
+      top: 10vh;
+      width: 600px;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .spacer {
+      height: 200vh;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1 style="font-family: 'Spectral', serif;">Scrollytelling Demo</h1>
+    <p>This page demonstrates a basic scrollytelling technique using a sticky image that remains fixed as the text scrolls beside it. Below is placeholder text and a visual element that fades in with scroll.</p>
+  </div>
+
+  <div class="sticky-container">
+    <img src="https://images.unsplash.com/photo-1601758064139-349bfbfd33d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+         alt="Scrollytelling Image" 
+         class="sticky-image">
+  </div>
+
+  <div class="section fade">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet facilisis orci a pulvinar. Vivamus nec augue eu nunc porta placerat. Etiam in dignissim sapien. Integer sed pharetra turpis. Sed sit amet commodo justo, eu pulvinar enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. In nec porttitor libero, id luctus nisl.
+    </p>
+    <p>
+      Suspendisse potenti. Sed sed urna est. Aliquam erat volutpat. Vivamus nec orci a velit facilisis aliquam sed non ligula. Nullam eget tincidunt libero. Etiam facilisis dapibus elit, at ultrices lorem suscipit non. Curabitur at viverra nisi.
+    </p>
+  </div>
+
+  <script>
+    const fadeInSection = document.querySelector('.fade');
+    window.addEventListener('scroll', () => {
+      const rect = fadeInSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        fadeInSection.classList.add('visible');
+      }
+    });
+  </script>
+
+</body>
+</html>
